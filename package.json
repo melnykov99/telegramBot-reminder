@@ -1,0 +1,23 @@
+{
+  "name": "telegrambot-reminder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melnykov99/telegramBot-reminder.git"
+  },
+  "author": "melnykov99",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melnykov99/telegramBot-reminder/issues"
+  },
+  "homepage": "https://github.com/melnykov99/telegramBot-reminder#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "grammy": "^1.19.2"
+  }
+}
