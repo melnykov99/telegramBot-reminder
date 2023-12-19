@@ -1,14 +1,17 @@
-const { Bot } = require("grammy");
+const {Bot} = require("grammy");
 require('dotenv').config()
 
 
 const tgBot = process.env.TGBOT_TOKEN;
 
-// Create a bot object
-const bot = new Bot(tgBot); // <-- place your bot token in this string
+const bot = new Bot(tgBot);
 
-// Register listeners to handle messages
-bot.on("message:text", (ctx) => ctx.reply("Echo: " + ctx.message.text));
+bot.on("message", async (ctx) => {
+  if (!ctx.message.text) {
+    await ctx.reply("Ошибка! Я понимаю только текстовые сообщения.")
+    return
+  }
+  await ctx.reply("Ech!o: " + ctx.message.text)
+});
 
-// Start the bot (using long polling)
 bot.start();
